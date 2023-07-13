@@ -1,6 +1,6 @@
 # Lofi-music-file-player
 
-this music is from <a href="https://lofigirl.com/releases/soothing-breeze/">link</a>
+this music is from <a href="https://lofigirl.com/releases/soothing-breeze/">Data</a>
 
 before you run this program, you need to install vlc
 
