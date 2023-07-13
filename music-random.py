@@ -15,17 +15,19 @@ instance = vlc.Instance()
 # Create a media player object
 player = instance.media_player_new()
 
+
 # Play the music files
 while True:
-    for music in music_files:
-        media = instance.media_new(music_dir + "/" + music)
-        player.set_media(media)
-        player.play()
-        
-        # Wait for the playback to finish
-        while player.get_state() != vlc.State.Ended:
-            pass
+    # Pick a random music file
+    music = music_files[i%len(music_files)]
+    media = instance.media_new(music_dir + "/" + music)
+    player.set_media(media)
+    i += 1
+    player.play()
+    
+    # Wait for the playback to finish
+    while player.get_state() != vlc.State.Ended:
+        pass
+    
 
-    # Release the resources
-    player.stop()
-    player.release()
+
